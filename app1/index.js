@@ -11,7 +11,6 @@ const dbsAreRunning = async () => {
     email: sequelize.STRING,
     password: sequelize.STRING,
   });
-  db.sync({ force: true });
   const client = new kafka.KafkaClient({
     kafkaHost: process.env.KAFKA_BOOTSTRAP_SERVERS,
   });

@@ -16,14 +16,14 @@ services:
       - KAFKA_ADVERTISED_HOST_NAME=kafka
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
   mongo:
-    container_name: mongo
+    container_name: mongo-kafka
     image: mongo
     ports:
       - 27017:27017
     volumes:
       - ./data/mongo:/data/db
   postgres:
-    container_name: postgres
+    container_name: postgres-kafka
     image: postgres
     ports:
       - 5432:5432
